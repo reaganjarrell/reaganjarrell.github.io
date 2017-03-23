@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+	<head> 
+		<meta charset="utf-8">
+
+		<title>Web Portfolio: Reagan Jarrell's Graphic Page</title>
+		<link type="text/css" rel="stylesheet" href="_assets/css/mystyle.css" media="screen">
+    
+				<a href="">
+    <img src="_assets/images/bbanner.jpg" width="1350" height="320" style="border:none" 
+         />
+				<link rel="shortcut icon" href="_assets/images/WD.png">
+			<main id="main">
+
+				<script>
+  function showAlert() { 
+  	var myText = "What's good kiddo"
+    alert ("What's good kiddo!");
+  }
+
+  function updateTime() { 
+
+  	// get all parts of the current time
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // add leading zero's to minutes and seconds
+  if (minutes < 10) { 
+    minutes = '0' + minutes;
+  }
+  if (seconds < 10) { 
+    seconds = '0' + seconds;
+  }				
+
+  // get time of day (am or pm) 
+  if (hours >= 12 && hours < 24) { 
+    var timeOfDay = 'pm';
+  }
+  else { 
+    var timeOfDay = 'am'; 
+  }
+				
+  // convert hours from 24-hour time to 12-hour time
+  if (hours > 12) { 
+    hours = hours - 12;
+  }
+
+    // splice them together into a character string named "currentTime"
+    var currentTime = hours + ':' + minutes + ':' + seconds + '  ' + timeOfDay;
+      hours = 24;
+  minutes = 7;
+  seconds = 3;  
+    
+    // get the clock div 
+    var myClock = document.getElementById('clock');
+    
+    // write the currentTime string to the clock div
+    myClock.innerHTML = currentTime;
+  }
+   function toggleClock() { 
+    // get the clock 
+    var myClock = document.getElementById('clock');
+
+    // get the current value of the clock's display property 
+    var displaySetting = myClock.style.display;
+
+    // also get the clock button, so we can change what it says 
+    var clockButton = document.getElementById('clockButton');
+
+  var currentTime = hours + ':' + minutes + ':' + seconds + '  ' + timeOfDay;
+				
+    // now toggle the clock and the button text, depending on current state
+    if (displaySetting == 'block') { 
+      // clock is visible. hide it
+      myClock.style.display = 'none';
+      // change button text
+      clockButton.innerHTML = 'Show clock';
+    }
+    else { 
+      // clock is hidden. show it 
+      myClock.style.display = 'block';
+      // change button text
+      clockButton.innerHTML = 'Hide clock';
+    }
+  }  
+
+
+  (function() {
+"use strict";
+
+var state = document.getElementById('s-state');
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+  
+  var btnEstimate = document.getElementById('btn-estimate');
+  
+  btnEstimate.disabled = true;
+  
+  state.addEventListener('change', function() {
+  
+    if (state.value === '') {
+      btnEstimate.disabled = true;
+    } else {
+      btnEstimate.disabled = false;
+    }
+  
+  });
+});
+
+function estimateTotal(event) {
+  event.preventDefault();
+  
+  if (state.value === '') {
+    alert('Please choose your shipping state.');
+    
+    state.focus();
+  }
+
+  var itemHoodie = document.getElementById('txt-q-hoodie').value,
+    itemSocks = document.getElementById('txt-q-socks').value,
+    itemWatch  = document.getElementById('txt-q-watch').value;
+    
+
+  var totalQty = itemHoodie + itemSocks +itemWatch,
+    estimate;
+
+  estimate =(125 * itemHoodie) + (15 * itemSocks) + (230 * itemWatch)
+
+  document.getElementById('txt-estimate').value = estimate;
+}
+
+})();
+  </script>
+
+
+			</head>
+			<body>
+
+        
+<div id="buttonn">
+	<button onclick="showAlert()">Click Me</button>
+	<button onclick="toggleClock()" id="clockButton">Show clock</button>
+</div>
+<div id="clock">
+		<body onload="setInterval('updateTime()',1000)">
+	
+
+</div>
+
+
+
+
+
+						
+				
+				<link rel="shortcut icon" href="_assets/images/WD.png">
+			<main id="main">
+				<h1>Web Portfolio: Javascript// Versace Store</h1>
+				<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="accessibility.html">Accessibilty</a></li>
+			<li><a href="usability.html">Usabitiliy</a></li>
+			<li><a href="graphics.html">Graphics</a></li>
+			<li><a href="javascript.html">Javascript</a></li>
+			<li><a href="tools.html">Tools</a></li>
+			<li><a href="videos.html">Videos</a></li>
+		</ul>
+
+	
+	</nav>
+
+
+	
+	<div class ="content">
+	<div class="post single post-255 page type-page status-publish hentry no-featured-image">
+<!-- /post-header section -->
+		<div class store="post-content section-inner">
+			<section class="main-content">
+                <form class="cart" id="cart-hplus">
+                <div class="item">
+                    <h1>Versace Hoodie</h1>
+                    <p>Light and Comfortable.</p>
+        
+                    <div class="info">
+                    <span>Price: $125/each</span>
+                    </div>
+        
+                    <div class="order">
+                    <label for="txt-q-hoodie">Quantity desired:</label>
+                    <input type="number" min="0" id="txt-q-hoodie" size="3" placeholder="0">
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <h1>Versace Socks</h1>
+                    <p>Sweat harder, smell better.</p>
+        
+                    <div class="info">
+                    <span>Price: $15/pair</span>
+                    </div>
+        
+                    <div class="order">
+                    <label for="txt-q-socks">Quantity desired:</label>
+                    <input type="number" min="0" id="txt-q-jsocks" size="3" placeholder="0">
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <h1>Versace Watch</h1>
+                    <p>The time is always right.</p>
+        
+                    <div class="info">
+                    <span>Price: $230/each</span>
+                    </div>
+        
+                    <div class="order">
+                    <label for="txt-q-watch">Quantity desired:</label>
+                    <input type="number" min="0" id="txt-q-watch" size="3" placeholder="0">
+                    </div>
+                </div>
+    
+                <div id="summary">
+                    <h2>Estimate Order</h2>
+                    
+                    <div class="group state">
+                        <label for="s-state">State (required):</label>
+                        <select id="s-state">
+
+                         	<option value="">- select -</option>                         
+                            <option value="">- Nevada -</option>
+                            <option value="">- Texas -</option>
+ 							<option value="">- California -</option>
+
+                        </select>
+                    </div>
+        
+                   
+        
+                    <div class="Specials">
+                        <label for="c-special-gift">Special:</label><br>
+                        <input type="checkbox" value="YES" name="c-special-gift" id="c-special-gift"> <label for="c-special-gift">This is a gift (include a card)</label><br>
+            
+                        <input type="checkbox" value="YES" name="c-special-email" id="c-special-email"> <label for="c-special-email">Sign up for the Versace Clothing Line Newspaper</label><br>
+            
+                        <input type="checkbox" value="YES" name="c-special-recipes" id="c-special-recipes"> <label for="c-special-recipes"> Donate a dollar to charity($1)</label>
+                    </div>
+        
+                    
+        
+                    <div class="group calc">
+                        
+                    </div>
+
+
+                    <div class="paymentoption">
+                        <label for="p-option">Payment Option:</label><br>
+                        <input type="checkbox" value="YES" name="c-special-gift" id="c-special-gift"> <label for="c-special-gift">Gift Card</label><br>
+            
+                        <input type="checkbox" value="YES" name="c-special-email" id="c-special-email"> <label for="c-special-email">Credit Card</label><br>
+            
+                        <input type="checkbox" value="YES" name="c-special-recipes" id="c-special-recipes"> <label for="c-special-recipes"> Debit Card</label>
+                    </div>
+        
+                    <div class="group notes">
+                        <label for="txt-notes">Comments:</label><br>
+                        
+                        <textarea name="txt-notes" id="txt-notes" rows="2" placeholder="Any other comments (does not affect estimate)"></textarea>
+                    </div>
+        
+                    <div class="group calc">
+                        <p>
+                        <label for="btn-estimate">Click to estimate:</label><br>
+                        <input type="submit" value="Estimate Total" id="btn-estimate">
+                        <input type="text" id="txt-estimate" placeholder="$0.00">
+                       
+
+
+                        </p>
+            
+                        <div id="results"></div>
+                    </div>
+                </div>
+        
+                </form>
+			</section>
+			<div class="clear"></div>
+		</div>
+	</div>
+<!-- /post -->
+	<div class="clear">
+	</div>
+</div>
+	<body>
+</html>
+	
+
+	
+
+		<!-- Contnet of webpage go here>
+	</body>
+</html>
