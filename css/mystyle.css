@@ -1,0 +1,238 @@
+/* This does not belong in your style sheet <!DOCTYPE html> 
+<html> */
+/* Reagan Jarrell, Period 4, Web Design*/
+/* 
+Color Scheme
+		#FFFFFF
+		#F29FC5
+		#DD4B8D
+		#D12B77
+*/
+/* /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+ CSS Reset by meyersweb */
+
+
+
+
+
+body {
+	background-image:url(https://newevolutiondesigns.com/images/freebies/black-white-background-3.jpg); 
+	font-size: 1em;
+	font-weight: normal;
+	font-family: Arial, Sans-serif;
+	color: #D12B77; 
+	text-align: left;
+	margin-left: 10%;
+	margin-right: 10%;
+	
+	width: 70%;
+	min-width: 720px;
+}
+h1 {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #DD4B8D; /* blue */
+	text-align: center;
+	font-family: "Charcoal", Impact, Charcoal,Sans-serif;
+	background-color: #F29FC5;
+}
+
+h2 {
+	font-size: 1em;
+	font-weight: normal;
+	font-family: Arial, Sans-serif;
+	color: #000000; /* blue */
+	text-align: left;
+	font-family: "New York", MS Serif, serif;
+	background-color: #F29FC5;
+	text-align: center;
+}
+
+div {
+	font-size: 1em;
+	font-weight: normal;
+	font-family: Arial, Sans-serif;
+	color: #000000; /* black */
+	text-align: left;
+	font-family: "New York", MS Serif, serif;
+	background-color: #F29FC5;
+	padding: 0px; 
+	border: 3px solid white;
+	margin: 0px;
+}
+
+p {
+	font-size: 1em;
+	font-weight: normal;
+	font-family: Arial, Sans-serif;
+	color: #000000; /* black */
+	text-align: left;
+	font-family: "New York", MS Serif, serif;
+	background-color: #DD4B8D;
+	border-width: 10px;
+	border-style: solid;
+	padding: 1em; 
+	border: 3px solid white;
+	margin:10px;
+}
+
+button { 
+    font-size: 1.1em;
+    background-color: #FFFFFF;
+    color: #DD4B8D;
+    border: 2px solid black;
+    box-shadow: 4px 4px 4px #D12B77;
+  }
+  button:hover, button:focus, button:active { 
+    /* swap colors */
+    color: #000000;
+    background-color: #DD4B8D;
+    cursor: pointer; /* displays a hand */
+  }
+a:hover, a:focus {
+ color: black;
+ background-color: #FFFFCC; /* yellow */
+}
+
+/* table styles */
+/* for accessibility.html */
+table {
+ margin: 0 auto; /* this is a trick for centering certain elements */
+ background-color: black;
+}
+th, td {
+ background-color: white;
+ color: black;
+ padding: 0.75em;
+ margin: 1px;
+}
+caption {
+ font-weight: bold;
+ font-size: 1.2em;
+ margin: 0.75em;
+}
+/* elements with ids and classes */
+div#skipnav {
+ width: 70%;
+ text-align: center;
+ padding: 10px;
+ top: 5px;
+ left: 5px;
+ position: absolute;
+}
+div.info {  /* use a period instead of # here because it's a class not an id */
+ width: 45%;
+ font-size: 1.2em;
+ padding: 10px;
+ float: left;
+}
+ ol.center {
+ 	text-align:center;
+ }
+
+/* navigation styles start here */
+
+nav {
+	clear: left; /* makes sure the nav doesn't float up with the info divs */
+	padding-bottom: 0.25em;
+	padding-top: 0.25em; /* pushes it down away from the info divs a bit */
+	position: relative;
+	text-align:center;
+	display: inline-block;
+}
+
+nav ul {
+	list-style-type: none; /* removes the bullet points */
+	padding-bottom: inherit;
+}
+
+nav ul li {
+	float: left; /* puts them in a line */
+	margin-right: 0.5em; /* spaces them out a little */
+}
+
+nav ul li a {
+	padding: 0.25em 1em; /* adds some padding around the links */
+	text-decoration: none; /* removes the underline */
+	background-color: #DD4B8D;  /* wasn't sure what color this was */
+	color: black;
+	border: 2px solid black; /* using the features of the 'box model', this adds a black border around the <li> making it a box */
+	border-top-left-radius: 1em 1em; /* rounded corner on the top left */
+	border-top-right-radius: 1em 1em; /* rounded corner on the top right */
+}
+
+nav ul li a:hover, nav ul li a:focus {
+	color: black;
+	background-color: white;
+}
+
+
+
+ul {
+	list-style-type: none;
+}
+
+div#clock {
+	display: block;
+	background-color:#FFFFFF;
+	border: 10pt;
+	font-size: 50pt;
+	text-align: center;
+
+}
+
+div#myplayer {
+	font-size: 1.1em;
+    background-color: #FFFFFF;
+    color: #DD4B8D;
+    border: 2px solid black;
+  
+}
+
+div#buttonn {
+	text-align:center;
+	background-color:#000000;
+}
+
+div#main, div#main p {
+ color: black;
+ background-color: white;
+ font-style: normal;
+}
+div#main p {
+ margin-left: 2em;
+}
+div#main p#overview {
+ /* cancel out the above style for the #overview */
+ margin-left: 1em;
+ font-size: 1.1em;
+}
+p#overview:first-letter {
+ font-family: "Lucida Calligraphy","Monotype Corsiva",cursive;
+ font-weight: bold;
+ font-size: 2em;
+}
+div#main p.temp {
+ font-style: italic;
+}
+
+h2#evolution {
+	text-align: center;
+	padding: .5em;
+}
+
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="accessibility.html">Accessibilty</a></li>
+      <li><a href="usability.html">Usabitiliy</a></li>
+      <li><a href="graphics.html">Graphics</a></li>
+      <li><a href="javascript.html">Javascript</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="videos.html">Videos</a></li>
+    </ul>
+<nav>
+
+/* </html> this doesn't below in your css, it's an html element */
